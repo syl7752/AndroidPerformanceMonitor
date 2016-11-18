@@ -16,3 +16,5 @@ Support Info:
 
 ### Export data
 App can export the data with .csv format,so user can analyze data easily
+
+#### PS:some features need root permission
