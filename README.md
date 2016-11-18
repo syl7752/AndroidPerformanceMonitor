@@ -1,5 +1,5 @@
 # SystemInfoMonitor
-a android app to monite phone system info (cpu,memory,battery...) in background
+This is a android app to monite phone system info (cpu,memory,battery...) in background
 
 # Features
 ### Record SystemInfo
@@ -13,5 +13,6 @@ Support Info:
   For process : "PSS","Process","Pid"
 -  Battery level
 -  Temperature
+
 ### Export data
 App can export the data with .csv format,so user can analyze data easily
