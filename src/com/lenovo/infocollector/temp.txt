@@ -1,0 +1,87 @@
+				Intent i = new Intent("com.lenovo.procrank.ProcRankThread");
+				long now = new Date().getTime();
+				i.putExtra("LAST_TIME", ((long) ((now - start) / 1000)));
+				sendBroadcast(i);
+				Thread.sleep(intervel);
+				
+				
+				
+				
+				
+				
+				
+	boolean viewServerWindowCommand(Socket client, String command, String parameters) {
+        if (isSystemSecure()) {
+            return false;
+        }
+
+        boolean success = true;
+        Parcel data = null;
+        Parcel reply = null;
+
+        BufferedWriter out = null;
+
+        // Any uncaught exception will crash the system process
+        try {
+            // Find the hashcode of the window
+            int index = parameters.indexOf(' ');
+            if (index == -1) {
+                index = parameters.length();
+            }
+            final String code = parameters.substring(0, index);
+            int hashCode = (int) Long.parseLong(code, 16);
+
+            // Extract the command's parameter after the window description
+            if (index < parameters.length()) {
+                parameters = parameters.substring(index + 1);
+            } else {
+                parameters = "";
+            }
+
+            final WindowManagerService.WindowState window = findWindow(hashCode);
+            if (window == null) {
+                return false;
+            }
+
+            data = Parcel.obtain();
+            data.writeInterfaceToken("android.view.IWindow");
+            data.writeString(command);
+            data.writeString(parameters);
+            data.writeInt(1);
+            ParcelFileDescriptor.fromSocket(client).writeToParcel(data, 0);
+
+            reply = Parcel.obtain();
+
+            final IBinder binder = window.mClient.asBinder();
+            // TODO: GET THE TRANSACTION CODE IN A SAFER MANNER
+            binder.transact(IBinder.FIRST_CALL_TRANSACTION, data, reply, 0);
+
+            reply.readException();
+
+            if (!client.isOutputShutdown()) {
+                out = new BufferedWriter(new OutputStreamWriter(client.getOutputStream()));
+                out.write("DONE\n");
+                out.flush();
+            }Could not send command DUMP with parameters 
+
+        } catch (Exception e) {
+            Slog.w(TAG, "Could not send command " + command + " with parameters " + parameters, e);
+            success = false;
+        } finally {
+            if (data != null) {
+                data.recycle();
+            }
+            if (reply != null) {
+                reply.recycle();
+            }
+            if (out != null) {
+                try {
+                    out.close();
+                } catch (IOException e) {
+
+                }
+            }
+        }
+
+        return success;
+    }

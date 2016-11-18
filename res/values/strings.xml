@@ -1,0 +1,76 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <string name="app_name">InfoMonitor V2.0.5</string>
+    <string name="action_settings">Settings</string>
+    <string name="hello_world">Hello world!</string>
+    <string name="reader_item">InfoReader</string>
+    <string name="collector_item">InfoCollector</string>
+    <string name="plugin_item">Plugins</string>
+    <string name="draw_item">Drawing</string>
+    <string name="plugin_cpu">CPUFill</string>
+    <string name="plugin_memory">MemoryFill</string>
+    <string name="plugin_showfps">Showfps</string>
+    <string name="plugin_analysis">Analysis</string>
+     <string name="pullfile">Export Data</string>
+
+    <drawable name="rb_pressed">#D9D9D9</drawable>
+    <drawable name="rb_normal">#00000000</drawable>
+
+    <string name="getmeminfo">Get Memory</string>
+    <string name="getcpuinfo">Get CPU</string>
+    <string name="getbatteryinfo">Get Battery</string>
+    <string name="gettemperature">Get Temperature</string>
+    <string name="getsdinfo">Get SD</string>
+    <string name="getbrightnessinfo">Get Brightness</string>
+
+    <drawable name="clr_normal">#1874CD</drawable>
+    <drawable name="clr_pressed">#D4D4D4</drawable>
+
+    <string name="processname">Process Name</string>
+    <string name="choosepro">Choose tested apps</string>
+    <string name="intervaltx">Interval(s)</string>
+    <string name="interval">60</string>
+    <string name="infotype">Info Types</string>
+    <string name="pssinfo">Proc Info</string>
+    <string name="raminfo">RAM</string>
+    <string name="cpuinfo">CPU</string>
+    <string name="SD">SD Storage</string>
+    <string name="Batterylevel">Battery Level</string>
+    <string name="teminfo">Temperature</string>
+    <string name="fpsinfo">FPS</string>
+    <string name="meminfo">Mem</string>
+    
+    <string name="appname">APP List</string>
+    <string name="space"></string>
+    <string name="batteryTv">Battery:</string>
+    <string name="cpuTv">CPU:</string>
+    <string name="memTv"></string>
+    <string name="temTv">Temperature:</string>
+    <string name="sdTv">SD:</string>
+    <string name="brightnessTv">Brightness:</string>
+    
+    <string name="batterytitle">Battery</string>
+    <string name="cputitle">CPU</string>
+    <string name="memtitle">Memory</string>
+    <string name="temtitle">Temperture</string>
+    <string name="sdtitle">SD</string>
+    <string name="brightnesstitle">Brightness</string>
+    
+    <string name="showfps_name">Plug Name：showfps</string>
+    <string name="showfps_des">Describe：showfps</string>
+    <string name="showfps_startshow">show</string>
+    <string name="showfps_stopshow">close</string>
+    
+    <string name="cpufill_name">Plug Name：cpufill</string>
+    <string name="cpufill_des">Describe：cpufill</string>
+    <string name="cpufill_start_simple">start_simple</string>
+    <string name="cpufill_stop_simple">close</string>
+     <string name="cpufill_start_multi">start_multi</string>
+    <string name="cpufill_stop_multi">close</string>
+     
+    <string name="start_monite">Start Monitor</string>
+    <string name="stop_monite">Stop Monitor</string>
+     
+
+</resources>

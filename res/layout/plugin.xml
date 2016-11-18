@@ -1,0 +1,86 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical" >
+      
+      <LinearLayout android:layout_width="fill_parent" 
+          android:layout_height="wrap_content"
+          android:layout_marginLeft="50dp"
+          android:layout_marginTop="50dp"
+           android:layout_margin="10dp"
+           android:orientation="vertical"
+        android:padding="10dp"
+                        android:gravity="center_vertical" 
+                  >
+          <TextView android:layout_width="wrap_content"
+                  android:layout_height="wrap_content"
+                  android:textSize="25sp"
+                  android:text="@string/plugin_item"/>
+          <LinearLayout 
+              android:layout_width="fill_parent"
+              android:layout_height="wrap_content"
+              android:layout_marginTop="10dp"
+              android:orientation="horizontal"
+                     android:padding="10dp"
+          android:id="@+id/cpufill_layout"
+          android:background="@drawable/corners_btn">
+              <ImageView android:layout_width="wrap_content"
+                  android:layout_height="wrap_content"
+                  android:src="@drawable/apk"/>
+              <TextView android:layout_width="wrap_content"
+                  android:layout_height="wrap_content"
+                  android:textSize="15sp"
+                  android:text="@string/plugin_cpu"/>
+          </LinearLayout>
+           <LinearLayout 
+              android:layout_width="fill_parent"
+              android:layout_height="wrap_content"
+              android:orientation="horizontal"
+                     android:padding="10dp"
+          android:id="@+id/memfill_layout"
+          android:background="@drawable/corners_btn">
+              <ImageView android:layout_width="wrap_content"
+                  android:layout_height="wrap_content"
+                  android:src="@drawable/apk"/>
+              <TextView android:layout_width="wrap_content"
+                  android:layout_height="wrap_content"
+                  android:textSize="15sp"
+                  android:text="@string/plugin_memory"/>
+          </LinearLayout>
+             <LinearLayout 
+              android:layout_width="fill_parent"
+              android:layout_height="wrap_content"
+              android:orientation="horizontal"
+                     android:padding="10dp"
+              android:id="@+id/showfps_layout"
+          android:background="@drawable/corners_btn">
+              <ImageView android:layout_width="wrap_content"
+                  android:layout_height="wrap_content"
+                  android:src="@drawable/apk"/>
+              <TextView android:layout_width="wrap_content"
+                  android:layout_height="wrap_content"
+                  android:textSize="15sp"
+                  android:text="@string/plugin_showfps"/>
+          </LinearLayout>
+           <LinearLayout 
+              android:layout_width="fill_parent"
+              android:layout_height="wrap_content"
+              android:orientation="horizontal"
+                     android:padding="10dp"
+  
+          android:background="@drawable/corners_btn">
+              <ImageView android:layout_width="wrap_content"
+                  android:layout_height="wrap_content"
+                  android:src="@drawable/apk"/>
+              <TextView android:layout_width="wrap_content"
+                  android:layout_height="wrap_content"
+                  android:textSize="15sp"
+                  android:text="@string/plugin_analysis"/>
+          </LinearLayout>
+      </LinearLayout>
+        
+      
+
+    
+</LinearLayout>

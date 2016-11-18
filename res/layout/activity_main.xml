@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<TabHost xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@android:id/tabhost"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:background="#FFFFFF" >
+
+   <LinearLayout
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:orientation="vertical" >
+
+        <FrameLayout
+            android:id="@android:id/tabcontent"
+            android:layout_width="fill_parent"
+            android:layout_height="0.0dip"
+            android:layout_weight="1.0" />
+
+        <TabWidget
+            android:id="@android:id/tabs"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_weight="0.0"
+            android:visibility="gone" />
+
+            <RadioGroup
+                android:id="@+id/main_tab_group"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="bottom"
+                android:background="#00000000"
+                android:gravity="bottom"
+                android:orientation="horizontal"
+                 >
+
+                <RadioButton
+                    android:id="@+id/main_tab_infocollector"
+                    style="@style/MyTabButton"
+                    android:layout_weight="1.0"   
+                    android:layout_height="wrap_content"
+                    android:checked="true"
+                    android:drawableTop="@drawable/collector1"
+                    android:text="@string/collector_item" />
+
+                <RadioButton
+                    android:id="@+id/main_tab_inforeader"
+                    style="@style/MyTabButton"
+                    android:layout_weight="1.0"
+                    android:drawableTop="@drawable/reader"
+                    android:text="@string/reader_item" />
+
+                <RadioButton
+                    android:id="@+id/main_tab_plugin"
+                    style="@style/MyTabButton"
+                    android:layout_weight="1.0"
+                       android:layout_height="wrap_content"
+                    android:drawableTop="@drawable/plugin"
+                    android:text="@string/plugin_item" />
+
+                <RadioButton
+                    android:id="@+id/main_tab_drawing"
+                    style="@style/MyTabButton"
+                    android:layout_weight="1.0"   
+                    android:layout_height="wrap_content"
+                    android:drawableTop="@drawable/draw"
+                    android:text="@string/draw_item" />
+            </RadioGroup>
+         
+    </LinearLayout>
+
+</TabHost>

@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical" >
+    <LinearLayout android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+     android:layout_marginLeft="50dp"
+          android:layout_marginTop="50dp"
+           android:layout_margin="10dp"
+           android:orientation="vertical"
+        android:padding="10dp">
+            <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:textSize="15sp"
+        android:text="@string/showfps_name" />
+
+    <TextView
+        android:id="@+id/textView2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:textSize="15sp"
+        android:text="@string/showfps_des" />
+    <LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:layout_marginTop="10dp">
+        <Button 
+            android:id="@+id/showfps_start"
+           android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+            android:text="@string/showfps_startshow"
+            android:background="@drawable/btn_selector"/>
+        <Button 
+            android:id="@+id/showfps_stop"
+            
+             android:layout_marginLeft="50dp"
+            android:layout_width="wrap_content"
+           
+        android:layout_height="wrap_content"
+            android:text="@string/showfps_stopshow"
+            android:background="@drawable/btn_selector"/>
+    </LinearLayout>
+        
+    </LinearLayout>
+
+
+</LinearLayout>

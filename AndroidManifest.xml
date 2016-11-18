@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.lenovo.infomonitor"
+    android:versionCode="1"
+    android:versionName="1.6.2" 
+ >
+<supports-screens
+android:smallScreens="true"
+android:normalScreens="true"
+android:largeScreens="true"
+android:resizeable="true"
+android:anyDensity="true" />
+    <uses-sdk
+        android:minSdkVersion="11"
+        android:targetSdkVersion="18" />
+    <uses-permission android:name="android.permission.GET_TASKS"/>
+    <uses-permission android:name="android.permission.READ_LOGS"/>
+	<uses-permission android:name="android.permission.SYSTEM_ALERT_WINDOW" />
+    
+    <application
+        android:allowBackup="true"
+        android:persistent="true"
+        android:icon="@drawable/appicon"
+        android:label="@string/app_name"
+        android:theme="@style/AppTheme"
+        android:name=".MyApp" >
+        <activity
+            android:name="com.lenovo.infomonitor.MainActivity"
+            android:launchMode="singleTask"
+            android:label="@string/app_name" >
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+          <activity android:name="com.lenovo.infocollector.InfoCollectorActivity"
+              android:launchMode="singleTask"
+                  >
+        </activity>
+         <activity
+            android:name="com.lenovo.inforeader.InfoReaderActivity"
+            android:launchMode="singleTask" ></activity>
+        <service android:name="com.lenovo.infocollector.InfoCollectorService" />
+          <activity android:name="com.lenovo.infomonitor.infoplugins.PluginActivity"
+                  />
+           <activity android:name="com.lenovo.infomonitor.infodrawing.DrawingActivity"
+                  />
+             <activity android:name="com.lenovo.infomonitor.infoplugins.ShowFPSActivity"
+                  />
+              <activity android:name="com.lenovo.infomonitor.infoplugins.CpuFillActivity"
+                  />
+               <activity
+            android:name="com.lenovo.infocollector.AppListActivity" ></activity>
+                <service android:name="com.lenovo.infomonitor.infodrawing.DrawingService" />
+                <service android:name="com.lenovo.infocollector.TemperatureService" />
+    </application>
+   <!-- <uses-permission android:name="android.permission.DUMP" />-->
+    <!--  <uses-permission android:name="android.permission.WRITE_MEDIA_STORAGE" /> -->
+    <uses-permission android:name="android.permission.READ_LOGS" />
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+    
+</manifest>

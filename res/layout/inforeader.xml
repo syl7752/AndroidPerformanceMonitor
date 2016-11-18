@@ -1,0 +1,96 @@
+  <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical" >
+
+   <!--定义一个头布局-->
+    <LinearLayout
+        android:id="@+id/linearLayout1"
+        android:layout_width="fill_parent"
+        android:layout_height="40.0dip"
+         >
+
+
+        <TextView
+            android:id="@+id/memlabel"
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent"
+            android:layout_weight="1.0"
+            android:gravity="center"
+            android:text="@string/memtitle"
+            android:textColor="#000000"
+            android:textSize="15dip" />
+
+
+        <TextView
+            android:id="@+id/cpulabel"
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent"
+            android:layout_weight="1.0"
+            android:gravity="center"
+            android:text="@string/cputitle"
+            android:textColor="#000000"
+            android:textSize="15.0dip" />
+
+
+        <TextView
+            android:id="@+id/batterylabel"
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent"
+            android:layout_weight="1.0"
+            android:gravity="center"
+            android:text="@string/batterytitle"
+            android:textColor="#000000"
+            android:textSize="15.0dip" />
+         <TextView
+            android:id="@+id/temlabel"
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent"
+            android:layout_weight="1.0"
+            android:gravity="center"
+            android:text="@string/temtitle"
+            android:textColor="#000000"
+            android:textSize="15.0dip" />
+          <TextView
+            android:id="@+id/sdlabel"
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent"
+            android:layout_weight="1.0"
+            android:gravity="center"
+            android:text="@string/sdtitle"
+            android:textColor="#000000"
+            android:textSize="15.0dip" />
+            <TextView
+            android:id="@+id/brightnesslabel"
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent"
+            android:layout_weight="1.0"
+            android:gravity="center"
+            android:text="@string/brightnesstitle"
+            android:textColor="#000000"
+            android:textSize="15.0dip" />
+          
+    </LinearLayout>
+       <!--底部的指示器-->
+    <LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content"
+        android:orientation="vertical">
+    <ImageView
+        android:id="@+id/cursor"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:scaleType="matrix"
+        android:src="@drawable/cursor1" />
+   <!--   <View  android:layout_width="wrap_content"
+        android:layout_height="1dp"
+        android:scaleType="matrix"
+        android:background="#D1D1D1"/> -->
+  </LinearLayout>
+   <LinearLayout android:layout_width="fill_parent" android:layout_height="5dp"></LinearLayout>
+<!-- 存放fragment的容器-->
+    <android.support.v4.view.ViewPager  
+        android:id="@+id/view_pager"  
+        android:layout_width="fill_parent"  
+        android:layout_height="0dp"  
+        android:layout_weight="1" >  
+    </android.support.v4.view.ViewPager> 
+</LinearLayout>
